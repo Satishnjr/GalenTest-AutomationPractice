@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.galenframework</groupId>
-  <artifactId>galen-AutomationPractice</artifactId>
+  <groupId>GalenTest-AutomationPractice</groupId>
+  <artifactId>GalenTest-AutomationPracticeartifactId>
   <version>0.1-SNAPSHOT</version>
-  <name>Galen Framework Sample Java Test Project</name>
+  <name>GalenTest-AutomationPractice</name>
   <packaging>jar</packaging>
   <description>A test project for testing Galen using Java-based tests</description>
   
