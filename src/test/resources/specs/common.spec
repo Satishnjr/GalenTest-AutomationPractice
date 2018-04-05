@@ -11,7 +11,7 @@
     home-page-steps           id	   home-page-tabs
     carousel                  css	   .bx-viewport
     footer                    css      .footer-container
-    newsletter		          id        newsletter-input
+    #newsletter		          id        newsletter-input
     
 
 
@@ -155,9 +155,9 @@
 	        width > 1300px 
     		height 485px
     		
-    	newsletter-input:
-    	    width 300px 
-    		height 45px
+    	#newsletter-input:
+    	    #width ~ 300px 
+    		#height ~ 45px
     	
     		
     @on mobile

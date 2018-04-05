@@ -17,7 +17,7 @@ public abstract class GalenTestBase extends GalenTestNgTestBase {
 
     @Override
     public WebDriver createDriver(Object[] args) {
-    	System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver", "C:\\chrome-driver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         if (args.length > 0) {
             if (args[0] != null && args[0] instanceof TestDevice) {
