@@ -152,8 +152,8 @@
 = footer =
     @on desktop
 	    footer:
-	        width ~ 1353px 
-    		height 485px
+	        width > 1000px 
+    		height > 400px
     		
     	#newsletter-input:
     	    #width ~ 300px 
@@ -162,10 +162,10 @@
     		
     @on mobile
 	    footer:
-	        width 417px 
-    		height 441px
+	        width > 400px 
+    		height > 400px
     		
     @on tablet
 	    footer:
-	        width 717px 
-    		height 441px
+	        width > 700px 
+    		height > 400px
