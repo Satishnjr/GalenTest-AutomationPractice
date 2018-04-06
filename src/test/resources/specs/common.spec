@@ -152,7 +152,7 @@
 = footer =
     @on desktop
 	    footer:
-	        width > 1300px 
+	        width ~ 1353px 
     		height 485px
     		
     	#newsletter-input:
