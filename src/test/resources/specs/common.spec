@@ -42,8 +42,8 @@
             
     @on desktop
     	header-img.responsive:
-    		width 1170px 
-    		height 65px
+    		width < 1200px 
+    		height < 70px
     		
 		header-logo:
 			below header-div.row ~ 15px
@@ -53,7 +53,7 @@
 			css font-size is "13px" 
 			
 		header-div.row:
-			width 1170px
+			width < 1200px
 			
 			 
 		search_box:
@@ -62,35 +62,35 @@
 			height ~ 45px
 		
 		cart:
-		    width 270px
+		    width < 300px
 		    below header-div.row 50px	
 		
 		menu:	        
-            width 1170px
+            width < 1200px
             height 59px
-            below search_box ~ 45px
-            below cart ~ 45px
+            below search_box < 45px
+            below cart < 45px
         
         home-page-steps: 	
-    	    width 1188px 
+    	    width < 1200px 
     		height 46px
 		
 		carousel:
-            width ~ 780px
-            height ~ 450px
+            width < 780px
+            height < 450px
             below menu ~ 30px
             	
 	@on mobile
 		header-img.responsive:	
-			width 387px 
+			width < 400px 
 			height 22px
 			
 		header-div.row:
-			width 387px
+			width < 400px
 			
 		header-logo:
 			below header-div.row ~ 15px
-			width 350px                                                                           
+			width < 400px                                                                           
 			height < 101px
 			css font-family is  "Arial, Helvetica, sans-serif"
 			css font-size is "13px" 
@@ -98,33 +98,33 @@
 			 
 		search_box:
 			below header-div.row 164px
-			width < 390px                                                                           
+			width < 400px                                                                           
 			height ~ 45px
 		
 		cart:
-		    width 387px
+		    width < 400px
 		    below header-div.row 259px
 		
 		home-page-steps: 	
-    	    width 387px 
+    	    width < 400px 
     		height 88px    
 		
 		carousel:
-            width 387px
-            height 223px
+            width < 400px
+            height < 250px
              
                	
 	@on tablet
 		header-img.responsive:
-			width 687px
-			height 38px
+			width < 700px
+			height ~ 38px
 			
 		header-div.row:
-			width 687px  
+			width < 700px  
 			
 		header-logo:
 			below header-div.row ~ 15px		
-			width  350px 						                                                                         
+			width < 700px 						                                                                         
 			height < 101px
 			css font-family is  "Arial, Helvetica, sans-serif"
 			css font-size is "13px" 
@@ -132,20 +132,20 @@
 			 
 		search_box:
 			below header-div.row 164px
-			#width > 687px                                                                           
+			width < 700px                                                                           
 			height ~ 45px
         
         cart:
-		    width 687px
+		    width < 700px
 		    below header-div.row 259px
 		
 		home-page-steps: 	
-    	    width 687px 
+    	    width < 700px 
     		height 44px 
     	
     	carousel:
-            width 687px
-            height 395px
+            width < 700px
+            height < 400px
             
             
             
