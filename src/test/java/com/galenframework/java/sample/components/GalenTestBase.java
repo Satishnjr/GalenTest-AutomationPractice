@@ -5,70 +5,80 @@ import static java.util.Arrays.asList;
 import java.util.List;
 
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
 
 import com.galenframework.testng.GalenTestNgTestBase;
 
 public abstract class GalenTestBase extends GalenTestNgTestBase {
 
-    private static final String ENV_URL = "http://automationpractice.com/index.php";
+	private static final String ENV_URL = "http://automationpractice.com/index.php";
 
-    @Override
-    public WebDriver createDriver(Object[] args) {
-    	System.setProperty("webdriver.chrome.driver", "C:\\chrome-driver\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        if (args.length > 0) {
-            if (args[0] != null && args[0] instanceof TestDevice) {
-                TestDevice device = (TestDevice)args[0];
-                if (device.getScreenSize() != null) {
-                    driver.manage().window().setSize(device.getScreenSize());
-                }
-            }
-        }                                                        
-        return driver;
-    }
+	static WebDriver driver;
 
-    public void load(String uri) {
-        getDriver().get(ENV_URL + uri);
-    }
+	@Override
+	public WebDriver createDriver(Object[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\chrome-driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		
+		if (args.length > 0) {
+			if (args[0] != null && args[0] instanceof TestDevice) {
+				TestDevice device = (TestDevice) args[0];
+				if (device.getScreenSize() != null) {
+					driver.manage().window().setSize(device.getScreenSize());
+					
+				}
+			}
+		}
+		return driver;
+	}
 
-    @DataProvider(name = "devices")
-    public Object [][] devices () {
-        return new Object[][] {
-                {new TestDevice("mobile", new Dimension(450, 800), asList("mobile"))},
-                {new TestDevice("tablet", new Dimension(750, 800), asList("tablet"))},
-                {new TestDevice("desktop", new Dimension(1400, 800), asList("desktop"))}
-        };
-    }
+	public void load(String uri) {
+		getDriver().get(ENV_URL + uri);
+	}
 
-    public static class TestDevice {
-        private final String name;
-        private final Dimension screenSize;
-        private final List<String> tags;
+	@DataProvider(name = "devices")
+	public Object[][] devices() {
+		return new Object[][] { { new TestDevice("mobile", new Dimension(450, 800), asList("mobile")) },
+				{ new TestDevice("tablet", new Dimension(750, 800), asList("tablet")) },
+				{ new TestDevice("desktop", new Dimension(1300, 800), asList("desktop")) } };
+	}
 
-        public TestDevice(String name, Dimension screenSize, List<String> tags) {
-            this.name = name;
-            this.screenSize = screenSize;
-            this.tags = tags;
-        }
+	public static class TestDevice {
+		private final String name;
+		private final Dimension screenSize;
+		private final List<String> tags;
 
-        public String getName() {
-            return name;
-        }
+		public TestDevice(String name, Dimension screenSize, List<String> tags) {
+			this.name = name;
+			this.screenSize = screenSize;
+			this.tags = tags;
+		}
 
-        public Dimension getScreenSize() {
-            return screenSize;
-        }
+		public String getName() {
+			return name;
+		}
 
-        public List<String> getTags() {
-            return tags;
-        }
+		public Dimension getScreenSize() {
+			return screenSize;
+		}
 
-        @Override
-        public String toString() {
-            return String.format("%s %dx%d", name, screenSize.width, screenSize.height);
-        }
-    }
+		public List<String> getTags() {
+			return tags;
+		}
+
+		@Override
+		public String toString() {
+			return String.format("%s %dx%d", name, screenSize.width, screenSize.height);
+		}
+
+		
+		
+
+	}
 }
